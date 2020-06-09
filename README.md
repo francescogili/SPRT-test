@@ -1,7 +1,5 @@
 # SPRT-test
 
-#SPRT test per una popolazione normale con due ipotesi H_0 e H_1
-
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -31,8 +29,6 @@ while i<1000:
     p_0 = p_0*np.exp((-1/(2*((sigma)**2)))*((x[i] - theta_0)**2))
     p_1 = p_1*np.exp((-1/(2*((sigma)**2)))*((x[i] - theta_1)**2))
     
-#    print(p_0)
-#    print(p_1)
     if p_1/p_0 <= B:
         print("accept H_0")
         print("The size of the population needed to end the test is: " + str(j))
